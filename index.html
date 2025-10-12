@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mundo Gamer - Inicio</title>
+  <meta name="description" content="Plantilla Mundo Gamer - Página de inicio" />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <!-- Header / navegación -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="Mundo Gamer logo" width="140" height="40" />
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pages/about.html">Acerca</a></li>
+          <li><a href="pages/games.html">Juegos</a></li>
+          <li><a href="pages/contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Bienvenido a Mundo Gamer</h1>
+        <p>Noticias, reseñas y guías para jugadores de todos los niveles.</p>
+        <p><a class="btn" href="pages/games.html">Ver reseñas</a></p>
+      </div>
+    </section>
+
+    <!-- Ejemplo de tarjeta de contenido -->
+    <section class="featured container" aria-label="Contenido destacado">
+      <article class="card">
+        <img src="images/featured-game.jpg" alt="Imagen del juego destacado" />
+        <div class="card-body">
+          <h2>Juego destacado: Aventuras Épicas</h2>
+          <p>Reseña completa — descubre por qué es el juego del momento.</p>
+          <a class="link" href="pages/games.html">Leer reseña</a>
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <h3>Últimas noticias</h3>
+        <ul>
+          <li><a href="#">Actualización 1.2 ya disponible</a></li>
+          <li><a href="#">Torneo regional: inscripciones</a></li>
+          <li><a href="#">Nuevo streaming con desarrolladores</a></li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mundo Gamer — Todos los derechos reservados.</p>
+      <nav aria-label="Enlaces secundarios">
+        <ul class="footer-links">
+          <li><a href="pages/privacy.html">Política de privacidad</a></li>
+          <li><a href="pages/terms.html">Términos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // pequeño script inline para el año en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
