@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mundo Gamer - Inicio</title>
-  <meta name="description" content="Plantilla Mundo Gamer - Página de inicio" />
+  <meta name="description" content="Mundo Gamer - Portal de videojuegos" />
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -13,16 +13,16 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <!-- Header / navegación -->
+  <!-- Encabezado -->
   <header class="site-header">
     <div class="container">
       <a class="logo" href="index.html">
-        <img src="images/logo.png" alt="Mundo Gamer logo" width="140" height="40" />
+        <img src="images/logo.png" alt="Mundo Gamer logo" />
       </a>
 
       <nav class="main-nav" aria-label="Navegación principal">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="pages/about.html">Acerca</a></li>
           <li><a href="pages/games.html">Juegos</a></li>
           <li><a href="pages/contact.html">Contacto</a></li>
@@ -31,56 +31,178 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Bienvenido a Mundo Gamer</h1>
-        <p>Noticias, reseñas y guías para jugadores de todos los niveles.</p>
-        <p><a class="btn" href="pages/games.html">Ver reseñas</a></p>
-      </div>
-    </section>
+  <!-- Hero principal -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a <span>Mundo Gamer</span></h1>
+      <p>Descubre reseñas, noticias y guías sobre tus videojuegos favoritos.</p>
+      <a href="pages/games.html" class="btn">Explorar Juegos</a>
+    </div>
+  </section>
 
-    <!-- Ejemplo de tarjeta de contenido -->
-    <section class="featured container" aria-label="Contenido destacado">
+  <!-- Contenido principal -->
+  <main class="container">
+    <section class="featured">
+      <h2>Juego Destacado</h2>
       <article class="card">
-        <img src="images/featured-game.jpg" alt="Imagen del juego destacado" />
+        <img src="images/featured-game.jpg" alt="Juego destacado" />
         <div class="card-body">
-          <h2>Juego destacado: Aventuras Épicas</h2>
-          <p>Reseña completa - descubre por qué es el juego del momento.</p>
-          <a class="link" href="pages/games.html">Leer reseña</a>
+          <h3>Aventuras Épicas</h3>
+          <p>Una experiencia de acción y fantasía que redefine el género RPG.</p>
+          <a class="btn-secondary" href="pages/games.html">Leer más</a>
         </div>
       </article>
+    </section>
 
-      <aside class="sidebar">
-        <h3>Últimas noticias</h3>
-        <ul>
-          <li><a href="#">Actualización 1.2 ya disponible</a></li>
-          <li><a href="#">Torneo regional: inscripciones</a></li>
-          <li><a href="#">Nuevo streaming con desarrolladores</a></li>
-        </ul>
-      </aside>
+    <section class="news">
+      <h2>Últimas Noticias</h2>
+      <ul>
+        <li><a href="#">Actualización 1.2 disponible</a></li>
+        <li><a href="#">Nuevo torneo regional abierto</a></li>
+        <li><a href="#">Tráiler exclusivo de GameX</a></li>
+      </ul>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Pie de página -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Mundo Gamer - Todos los derechos reservados.</p>
-      <nav aria-label="Enlaces secundarios">
-        <ul class="footer-links">
-          <li><a href="pages/privacy.html">Política de privacidad</a></li>
-          <li><a href="pages/terms.html">Términos</a></li>
-        </ul>
-      </nav>
-    </div>
+    <p>&copy; <span id="year"></span> Mundo Gamer - Todos los derechos reservados.</p>
   </footer>
 
   <!-- Scripts -->
-  <script>
-    // pequeño script inline para el año en el footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
+--------------------------------------------------------------
+body {
+  --blog-gutter-bg: #c8e6c9; /* verde menta claro */
+  background-color: var(--blog-gutter-bg);
+  font-family: 'Poppins', Verdana, sans-serif;
+  color: #2f2f2f;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor del blog: columna blanca centrada */
+.blog-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #d8d8d8;
+}
+
+/* Área de las entradas */
+.blog-main {
+  min-width: 0;
+}
+
+/* Sidebar */
+.blog-sidebar {
+  align-self: start;
+}
+
+/* ---------- Entradas ---------- */
+
+.post {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ccc;
+}
+
+.post-title a {
+  color: #2979ff; /* azul amigable */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+  color: #1e64d1;
+}
+
+.post-meta {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.post-excerpt {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ---------- Sidebar ---------- */
+
+.useful-card {
+  background: #f1f8e9;
+  border: 2px solid #b5d6a7;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.useful-card-header {
+  font-weight: bold;
+  color: #33691e;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #aed581;
+  padding-bottom: 0.25rem;
+}
+
+.useful-card-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.useful-card-body li {
+  margin-bottom: 0.4rem;
+}
+
+.useful-card-body a {
+  color: #1b5e20;
+  text-decoration: none;
+}
+
+.useful-card-body a:hover {
+  text-decoration: underline;
+  color: #2e7d32;
+}
+
+/* ---------- Ajustes generales ---------- */
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+header img {
+  max-width: 140px;
+}
+
+.site-footer {
+  background: #e8f5e9;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #444;
+  border-top: 2px solid #c5e1a5;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+  .blog-wrapper {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  .blog-sidebar {
+    margin-top: 1.5rem;
+  }
+}
